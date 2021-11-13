@@ -1,0 +1,65 @@
+@mixin fontStyle($fontSize, $fontWeight) {
+    font-family:'Spartan', sans-serif;
+    font-size: $fontSize;
+    font-weight:$fontWeight;
+}
+
+@mixin formStyle ($colorBG){
+    background-color: $colorBG;
+    border-radius: 50px;
+    border: none;    
+}
+
+@mixin flexCenter (){
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 7vw; 
+}
+
+form {
+    @include flexCenter();
+    flex-flow: column wrap;
+    h1{
+        @include fontStyle(9vh, bold);
+        margin-bottom: 3vw;
+    }
+    label{
+        @include fontStyle(2.5vw, bold);
+    }
+    input{
+        @include fontStyle(2.5vw, normal);
+        @include formStyle(#F2E088);
+        margin: 2vw;
+        padding: 1.5vmin;
+    }
+    button{
+        @include fontStyle(2vw, bold);
+        @include formStyle(#F89C2D);
+        cursor: pointer;
+        padding: 1.5vmin !important;
+    }   
+}
+
+.link{
+    @include flexCenter();
+    margin-top: 3vw;
+    .changeRoute{
+        @include fontStyle(3vw, bold);
+        text-decoration: underline;
+    }
+}
+
+
+.container {
+    @include flexCenter();
+    width: 28%;
+    img{
+        width: 100%;   
+    }    
+}

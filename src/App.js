@@ -1,17 +1,24 @@
-import React, {Component} from 'react';
-import './App.css';
-import tasks from './sample/tasks.json';
-import Tareas from './components/Tasks.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import SignUp from './components/SingUp'
+import LogIn from './components/LogIn'
+import Menu from "./components/Menu";
 
-class App extends Component {
-  state = {
-    tasks: tasks
-  }
-  render(){
-    return (
-      <Tareas tasks={this.state.tasks}/>
-    )
-  }
+function App() {
+  return (
+    <Router>
+      <div>
+       <Routes>
+        <Route path='/' element={<LogIn/>} />
+        <Route path='register' element={<SignUp/>} />
+        <Route path='menu' element={<Menu/>} />
+       </Routes>
+       </div>
+    </Router>
+  );
 }
 
 export default App;
