@@ -1,0 +1,101 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 7vw;
+}
+
+form {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+form h1 {
+  font-family: 'Spartan', sans-serif;
+  font-size: 9vh;
+  font-weight: bold;
+  margin-bottom: 3vw;
+}
+
+form label {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vw;
+  font-weight: bold;
+}
+
+form input {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vw;
+  font-weight: normal;
+  background-color: #F2E088;
+  border-radius: 50px;
+  border: none;
+  margin: 2vw;
+  padding: 1.5vmin;
+}
+
+form button {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  background-color: #F89C2D;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 1.5vmin !important;
+}
+
+.link {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3vw;
+}
+
+.link .changeRoute {
+  font-family: 'Spartan', sans-serif;
+  font-size: 3vw;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 28%;
+}
+
+.container img {
+  width: 100%;
+}
+
+body {
+  background-color: rgba(61, 68, 244, 0.65);
+}
+/*# sourceMappingURL=Style.css.map */
