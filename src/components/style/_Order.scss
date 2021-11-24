@@ -1,0 +1,117 @@
+@mixin fontStyle ($fontSize, $fontWeight, $fontStyle){
+    font-family:'Spartan', sans-serif;
+    font-size: $fontSize;
+    font-weight:$fontWeight;
+    font-style: $fontStyle;
+}
+@mixin btnStyles() {
+    @include fontStyle(2.5vmin,bolder,normal);   
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: none;
+    padding: .8vmin;
+}
+
+
+.billMenu{    
+    // height: 100%;
+    background: rgba(217, 162, 150, 0.45);
+    border: 8px solid #D9A296;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 1vmin;
+    margin-top: 1.5vmin;
+    margin-bottom: 2vmin;
+}
+
+#OrderData{
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family:'Spartan', sans-serif;
+}
+
+.clientData{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    border-bottom: blueviolet;
+    label{
+        @include fontStyle(2vmin,bolder,italic);        
+        margin-right: 1vmin;        
+    }
+    input{
+        height: 3vmin;
+        width: 45%;
+        border: 3px solid #D9A296;
+        box-sizing: border-box;
+        border-radius: 9px;
+        margin-right: 2vmin;
+        background:rgba(240, 249, 255, 0.5);
+    }
+    select {
+        width: 10%;
+        border: 3px solid #D9A296;
+        border-radius: 10px;
+        background:rgba(240, 249, 255, 0.5);
+        height: 3vmin;
+    }
+}
+
+.btnRemove ,.btnLess{
+    width: 3vmin;
+    background: none;
+    border: none;
+    margin-right: 1vmin;
+    img{
+        width: 3vmin;
+    }
+}
+.tableOrder{
+    width: 95%;
+    .orderTitles{
+        width: 100%; 
+    }
+    .price{
+        text-align: end
+    }
+    hr{
+        color: black;
+        border: 1px solid #000000;
+        width: 140%;
+    }
+    th{
+        @include fontStyle(2.5vmin,bolder,normal); 
+        margin-right: 1.5vim;
+    }
+    td{
+        @include fontStyle(2.5vmin,bolder,normal);  
+    }
+}
+.totalOrder{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #000000;
+    h3{
+        @include fontStyle(2.5vmin,bolder,black); 
+        margin-right: 2vmin;
+    }
+}
+.btnSubmitOrder{
+    @include btnStyles();  
+    background: #F2A950;
+}
+.btnCancelOrder{
+    @include btnStyles();  
+    background: #FF598B;
+}
+
+.billElements{
+    width: 46%;
+}
+
+.orderBtns{
+    display: flex;
+    justify-content: space-evenly;
+}

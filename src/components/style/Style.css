@@ -21,6 +21,9 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  border: 5px solid #6C5A98;
+  background-color: rgba(240, 249, 255, 0.27);
+  border-radius: 50px;
 }
 
 form h1 {
@@ -95,7 +98,393 @@ form button {
   width: 100%;
 }
 
+.menu {
+  background-color: #F7E7D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 1vmin -2vmax 0 -2vmax;
+  padding-left: 4vmax;
+  padding-right: 3vmax;
+  min-height: 100vmin;
+  max-height: auto;
+}
+
+.menu .menuElements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .menuBtns {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2vmin;
+  display: flex;
+}
+
+.menu .menuBtn {
+  font-family: 'Spartan', sans-serif;
+  font-size: 3vmin;
+  font-weight: bold;
+  padding: auto;
+  margin: 1.5vmax;
+  width: 23vmax;
+  height: 7.5vmin;
+  text-align: center;
+  background: rgba(255, 226, 101, 0.6);
+  border: 8px solid #FFE265;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.menu .menuBtn:focus {
+  background: rgba(255, 226, 101, 0.9);
+  -webkit-box-shadow: 0px 6px 4px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+#listProduct {
+  width: 52%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+#listProduct .product {
+  padding: 1.5vmin;
+  margin: 1.5vmin;
+  width: 22vmax;
+  height: 10vmax;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: rgba(217, 162, 150, 0.63);
+  font-family: 'Spartan', sans-serif;
+  font-size: 2vmin;
+  font-weight: bold;
+  line-height: 1vmin;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+
+#listProduct .product .image {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3vmin;
+  margin: 0.5vmin;
+  width: 7vmax;
+  height: 7vmax;
+  background-color: rgba(247, 231, 208, 0.4);
+  border-radius: 7px;
+}
+
+#listProduct .product .image img {
+  padding: 0.2vmin;
+  margin: auto;
+  width: 6vmax;
+  height: 6vmax;
+}
+
+#listProduct .product .price {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+#listProduct .product .price span {
+  padding: 0.5vmin;
+  margin: 0.2vmin;
+  width: 100%;
+  height: auto;
+  line-height: 2.5vmin;
+}
+
+.headerW {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerW .logoheader {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10vmin;
+  margin-left: 3vmin;
+}
+
+.headerW .logoheader img {
+  width: 10vmin;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.headerW .btnsHeader {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30vmin;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerW .btnMenu, .headerW .btnReady {
+  background: none;
+  border: none;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1vmin;
+  margin: 1vmin;
+  width: 11vmin;
+  height: 11vmin;
+}
+
+.headerW .btnMenu img, .headerW .btnReady img {
+  width: 13.5vmin;
+}
+
+.headerW .btnlogOut {
+  font-family: 'Spartan', sans-serif;
+  font-size: 3vmin;
+  font-weight: bold;
+  padding: 2vmin;
+  margin: 1vmin;
+  width: 11vmin;
+  height: 7vmin;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: rgba(242, 107, 170, 0.81);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 30px;
+}
+
+.billMenu {
+  background: rgba(217, 162, 150, 0.45);
+  border: 8px solid #D9A296;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 30px;
+  padding: 1vmin;
+  margin-top: 1.5vmin;
+  margin-bottom: 2vmin;
+}
+
+#OrderData {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Spartan', sans-serif;
+}
+
+.clientData {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: blueviolet;
+}
+
+.clientData label {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2vmin;
+  font-weight: bolder;
+  font-style: italic;
+  margin-right: 1vmin;
+}
+
+.clientData input {
+  height: 3vmin;
+  width: 45%;
+  border: 3px solid #D9A296;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 9px;
+  margin-right: 2vmin;
+  background: rgba(240, 249, 255, 0.5);
+}
+
+.clientData select {
+  width: 10%;
+  border: 3px solid #D9A296;
+  border-radius: 10px;
+  background: rgba(240, 249, 255, 0.5);
+  height: 3vmin;
+}
+
+.btnRemove, .btnLess {
+  width: 3vmin;
+  background: none;
+  border: none;
+  margin-right: 1vmin;
+}
+
+.btnRemove img, .btnLess img {
+  width: 3vmin;
+}
+
+.tableOrder {
+  width: 95%;
+}
+
+.tableOrder .orderTitles {
+  width: 100%;
+}
+
+.tableOrder .price {
+  text-align: end;
+}
+
+.tableOrder hr {
+  color: black;
+  border: 1px solid #000000;
+  width: 140%;
+}
+
+.tableOrder th {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  font-style: normal;
+  margin-right: 1.5vim;
+}
+
+.tableOrder td {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.totalOrder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 1px solid #000000;
+}
+
+.totalOrder h3 {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  font-style: black;
+  margin-right: 2vmin;
+}
+
+.btnSubmitOrder {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  font-style: normal;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  padding: .8vmin;
+  background: #F2A950;
+}
+
+.btnCancelOrder {
+  font-family: 'Spartan', sans-serif;
+  font-size: 2.5vmin;
+  font-weight: bolder;
+  font-style: normal;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  padding: .8vmin;
+  background: #FF598B;
+}
+
+.billElements {
+  width: 46%;
+}
+
+.orderBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 body {
-  background-color: rgba(61, 68, 244, 0.65);
+  background: rgba(61, 68, 244, 0.38);
 }
 /*# sourceMappingURL=Style.css.map */

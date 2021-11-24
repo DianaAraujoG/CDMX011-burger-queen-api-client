@@ -4,9 +4,9 @@
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
-import  FormLogIn  from '../components/LogIn/FormLogIn';
+import  FormLogIn  from '../components/FormLogIn';
 import { MemoryRouter } from 'react-router-dom';
-import LogIn from '../components/LogIn/LogIn'
+import LogIn from '../pages/LogIn/LogIn'
 
 describe('Test LogIn', () => {
     test('should render', () => {

@@ -43,7 +43,10 @@ form {
         @include formStyle(#F89C2D);
         cursor: pointer;
         padding: 1.5vmin !important;
-    }   
+    }  
+    border: 5px solid #6C5A98; 
+    background-color: rgba(240, 249, 255, 0.27);
+    border-radius: 50px;
 }
 
 .link{

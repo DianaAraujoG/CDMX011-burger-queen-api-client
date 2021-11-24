@@ -3,8 +3,8 @@ import logo from '../../assets/Burger-Queen-logo.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../FirebaseConfig';
 import { Link , useNavigate } from 'react-router-dom';
-import FormLogIn  from './FormLogIn'
-import '../style/Style.css';
+import FormLogIn  from '../../components/FormLogIn'
+
 
 // import Errors from './errors';
 
