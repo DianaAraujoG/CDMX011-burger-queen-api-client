@@ -26,7 +26,7 @@ function SignUp () {
             })
             console.log(user);
             if(user){
-                 navigate("/menu");
+                navigate("/menu");
             }
         } catch (error){
             // Swal.fire

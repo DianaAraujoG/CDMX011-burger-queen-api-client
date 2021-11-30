@@ -1,0 +1,225 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "name": "Café americano",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/cafe.png",
+      "type": "desayuno",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 1,
+      "name": "Café con leche",
+      "price": 7,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/cafe-con-leche.png",
+      "type": "desayuno",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "name": "Sandwich de jamón y queso",
+      "price": 10,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/sandwich.png",
+      "type": "desayuno",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 3,
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/orange-juice.png",
+      "type": "desayuno",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 4,
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 5,
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa%20(2).png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 6,
+      "name": "Papas fritas",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/french-fries.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 7,
+      "name": "Aros de cebolla",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/aros-de-cebolla.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 8,
+      "name": "Agua 500ml",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/glass-of-water.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 9,
+      "name": "Agua 750ml",
+      "price": 7,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/glass-of-water.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 10,
+      "name": "Bebida/ Gaseosa 500ml",
+      "price": 5,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/reajuste-salarial.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    },
+    {
+      "id": 11,
+      "name": "Bebida/ Gaseosa 750ml",
+      "price": 7,
+      "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/reajuste-salarial.png",
+      "type": "almuerzo",
+      "dataEntry": "2021-11-16T12:25:43.511Z"
+    }
+  ],
+  "orders": [
+    {
+      "userId": "luna@correo.com",
+      "client": "tiempo",
+      "table": "04",
+      "products": [
+        {
+          "id": 5,
+          "name": "Hamburguesa doble",
+          "price": 15,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa%20(2).png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        },
+        {
+          "id": 8,
+          "name": "Agua 500ml",
+          "price": 5,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/glass-of-water.png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        },
+        {
+          "id": 7,
+          "name": "Aros de cebolla",
+          "price": 5,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/aros-de-cebolla.png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        }
+      ],
+      "status": "delivered",
+      "dateEntry": "2021-11-26T16:48:38.176Z",
+      "deliveringTime": "2021-11-27T06:06:24.150Z",
+      "id": 1
+    },
+    {
+      "userId": "luna@correo.com",
+      "client": "la gata",
+      "table": "05",
+      "products": [
+        {
+          "id": 11,
+          "name": "Bebida/ Gaseosa 750ml",
+          "price": 7,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/reajuste-salarial.png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "name": "Hamburguesa simple",
+          "price": 10,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa.png",
+          "type": "almuerzo",
+          "dataEntry": 0,
+          "qty": 1
+        },
+        {
+          "id": 5,
+          "name": "Hamburguesa doble",
+          "price": 15,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa%20(2).png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        }
+      ],
+      "status": "delivering",
+      "dateEntry": "2021-11-26T16:51:37.971Z",
+      "deliveringTime": "2021-11-26T17:36:32.406Z",
+      "id": 2
+    },
+    {
+      "userId": "luna@correo.com",
+      "client": "yuya",
+      "table": "07",
+      "products": [
+        {
+          "id": 5,
+          "name": "Hamburguesa doble",
+          "price": 15,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/hamburguesa%20(2).png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        },
+        {
+          "id": 6,
+          "name": "Papas fritas",
+          "price": 5,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/french-fries.png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 2
+        },
+        {
+          "id": 10,
+          "name": "Bebida/ Gaseosa 500ml",
+          "price": 5,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/reajuste-salarial.png",
+          "type": "almuerzo",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        },
+        {
+          "id": 3,
+          "name": "Jugo de frutas natural",
+          "price": 7,
+          "image": "https://raw.githubusercontent.com/DianaAraujoG/La-Magia-de-Mexico/main/img-Burger-Queen/orange-juice.png",
+          "type": "desayuno",
+          "dataEntry": "2021-11-16T12:25:43.511Z",
+          "qty": 1
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "2021-11-26T18:54:37.971Z",
+      "deliveringTime": 0,
+      "id": 3
+    }
+  ]
+}
