@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import logo from '../../assets/Burger-Queen-logo.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../FirebaseConfig';
-import { Link , useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 import FormLogIn  from '../../components/FormLogIn'
 
 
@@ -23,7 +23,6 @@ function LogIn (){
             if(user){
                navigate("/menu");
             }
-              
         }catch(error){
             console.log(error.code);
         }
@@ -34,8 +33,7 @@ function LogIn (){
           <main>
           <div className= 'container'><img src={logo} className="App-logo" alt="logo" /></div>
             <FormLogIn saveData={logInPromise}></FormLogIn>
-          </main>
-          <div className='link'><Link to = '/register' className='changeRoute'>Registrate</Link></div>
+          </main>          
         </Fragment>    
     )
 }

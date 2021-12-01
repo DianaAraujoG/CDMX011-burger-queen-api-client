@@ -7,6 +7,10 @@ main {
   margin-top: 12vw;
 }
 
+.formRegister {
+  margin-top: 2vw;
+}
+
 form {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -29,7 +33,7 @@ form {
 
 form h1 {
   font-family: 'Spartan', sans-serif;
-  font-size: 7vh;
+  font-size: 5vh;
   font-weight: bold;
   margin-bottom: 3vw;
 }
@@ -40,7 +44,7 @@ form label {
   font-weight: bold;
 }
 
-form input {
+form input, form select {
   font-family: 'Spartan', sans-serif;
   font-size: 2.5vw;
   font-weight: normal;
@@ -239,87 +243,6 @@ form button {
   line-height: 2.5vmin;
 }
 
-.headerW {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.headerW .logoheader {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 10vmin;
-  margin-left: 3vmin;
-}
-
-.headerW .logoheader img {
-  width: 10vmin;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.headerW .btnsHeader {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 30vmin;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.headerW .btnMenu, .headerW .btnReady {
-  background: none;
-  border: none;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1vmin;
-  margin: 1vmin;
-  width: 11vmin;
-  height: 11vmin;
-}
-
-.headerW .btnMenu img, .headerW .btnReady img {
-  width: 13.5vmin;
-}
-
-.headerW .btnlogOut {
-  font-family: 'Spartan', sans-serif;
-  font-size: 3vmin;
-  font-weight: bold;
-  padding: 2vmin;
-  margin: 1vmin;
-  width: 11vmin;
-  height: 7vmin;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background: rgba(242, 107, 170, 0.81);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-  border-radius: 30px;
-}
-
 .billMenu {
   background: rgba(217, 162, 150, 0.45);
   border: 8px solid #D9A296;
@@ -485,61 +408,6 @@ form button {
           justify-content: space-evenly;
 }
 
-.kitchenHeader {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.kitchenHeader .logoheader {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 10vmin;
-  margin-left: 3vmin;
-}
-
-.kitchenHeader .logoheader img {
-  width: 10vmin;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.kitchenHeader h1 {
-  font-family: 'Spartan', sans-serif;
-  font-size: 4vmin;
-  font-weight: bold;
-}
-
-.kitchenHeader .btnlogOut {
-  font-family: 'Spartan', sans-serif;
-  font-size: 3vmin;
-  font-weight: bold;
-  padding: 2vmin;
-  margin: 1vmin;
-  width: 11vmin;
-  height: 7vmin;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background: rgba(242, 107, 170, 0.81);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-  border-radius: 30px;
-}
-
 .kitchenOrders, .waitressOrders {
   background-color: #F7E7D0;
   display: -webkit-box;
@@ -661,6 +529,109 @@ form button {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   border: none;
+}
+
+.header {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logoheader {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10vmin;
+  margin-left: 3vmin;
+}
+
+.header .logoheader img {
+  width: 10vmin;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .btnsHeader {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30vmin;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .btnMenu, .header .btnReady, .header .btnRegister, .header .btnAdminProducts {
+  background: none;
+  border: none;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1vmin;
+  margin: 1vmin;
+  width: 11vmin;
+  height: 11vmin;
+}
+
+.header .btnMenu img, .header .btnReady img, .header .btnRegister img, .header .btnAdminProducts img {
+  width: 13.5vmin;
+}
+
+.header .btnlogOut {
+  font-family: 'Spartan', sans-serif;
+  font-size: 3vmin;
+  font-weight: bold;
+  padding: 2vmin;
+  margin: 1vmin;
+  width: 11vmin;
+  height: 7vmin;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: rgba(242, 107, 170, 0.81);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 30px;
+}
+
+.header h1 {
+  font-family: 'Spartan', sans-serif;
+  font-size: 4vmin;
+  font-weight: bold;
+}
+
+.Register {
+  background-color: #F7E7D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 1vmin -2vmax 0 -2vmax;
+  padding-left: 4vmax;
+  padding-right: 3vmax;
+  min-height: 100vmin;
+  max-height: auto;
 }
 
 body {

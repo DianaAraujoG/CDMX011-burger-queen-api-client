@@ -3,11 +3,12 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import SignUp from './components/SingUp';
 import LogIn from './pages/LogIn/LogIn';
 import Menu from "./pages/menu/Menu";
 import OrderToDeliver from "./pages/ordersToDeliver/OrdersToDeliver";
 import Kitchen from './pages/Kitchen/Kitchen';
+import Register from './pages/Register/Register'
+import AdminProducts from './pages/AdminProducts/AdminProducts'
 // import { auth } from './FirebaseConfig';
 
 // import { useNavigate } from 'react-router-dom';
@@ -26,7 +27,8 @@ function App() {
       <div>
        <Routes>
         <Route path='/' element={<LogIn/>} />
-        <Route path='register' element={<SignUp/>} />
+        <Route path='register' element={<Register/>} />
+        <Route path='adminProducts' element={<AdminProducts/>} />
         <Route path='menu' element={<Menu/>} />
         <Route path='orderToDeliver' element={<OrderToDeliver/>} />
         <Route path='kitchen' element={<Kitchen/>} />

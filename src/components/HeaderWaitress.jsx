@@ -19,7 +19,7 @@ const HeaderWaitress = () => {
     } */
     return (
         <Fragment>
-            <div className="headerW">
+            <div className="header">
                 {/* <div className= 'logoheader'><img src= {logo} alt= 'logo BurgerQueen'></img></div> */}
                 <Header> 
                 <div className="btnsHeader">

@@ -221,5 +221,14 @@
       "deliveringTime": 0,
       "id": 3
     }
+  ],
+  "users": [    
+    {
+      "email": "voy@mail.com",
+      "password": "123456",
+      "name": "voydenuevo2",
+      "role": "admin",
+      "id": 0
+    }
   ]
 }
