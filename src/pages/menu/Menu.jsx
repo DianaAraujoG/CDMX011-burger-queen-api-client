@@ -1,14 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import { signOut } from "firebase/auth";
-// import { auth } from '../../FirebaseConfig';
-// import { useNavigate } from 'react-router-dom';
 import '../../components/style/Style.css';
 import GetProducts from "../../components/products";
 import HeaderWaitress from "../../components/HeaderWaitress";
 import OrderData from "../../components/Order";
 import SendButton from '../../components/SendButton';
-
-//import { auth } from '../../FirebaseConfig';
 
 function Menu (){
 

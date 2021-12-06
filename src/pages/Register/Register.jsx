@@ -1,22 +1,21 @@
 import React, { Fragment, useState } from 'react';
-//import { auth } from '../../FirebaseConfig';
-//import { createUserWithEmailAndPassword, updateProfile, updateCurrentUser } from 'firebase/auth';
 import { Link} from 'react-router-dom';
 import Header from '../../components/Header';
 import FormRegister from '../../components/FormRegister';
 import '../../components/style/Style.css';
-//import Cookies from 'universal-cookie/es6';
-
 function Register (){ 
     
     const [users, setUsers] = useState([])
     
-    fetch('http://localhost:8000/users')
+    fetch('https://burger-queen-fake-server-app.herokuapp.com/users/')
         .then(res => {
             return res.json();
         })
         .then(users => {
             setUsers(users);                
+        })
+        .catch(error => {
+            alert(error);
         })
 
     
@@ -32,7 +31,7 @@ function Register (){
     }
 
     const saveUserInfo = (signMail,signPassword, signUsername, signRole ) => {
-        fetch('http://localhost:8000/users', {
+        fetch('https://burger-queen-fake-server-app.herokuapp.com/users/', {
             method:'POST',
             headers:{
                 "Content-Type": "application/json"

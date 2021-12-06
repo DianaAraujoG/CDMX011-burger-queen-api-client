@@ -1,13 +1,14 @@
 import React from 'react';
-import { auth } from '../FirebaseConfig';
 import './style/Style.css';
 import Swal from 'sweetalert2'
+import Cookies from 'universal-cookie/es6';
 
 function SendButton ({client, table, products, setProducts,setClient}){
     
+    const cookies = new Cookies();
     const saveOrder = () => {
         const order ={
-           'userId' : auth.currentUser.email,   /*Aqui usamos auth*/                    
+           'userId' : cookies.get('name'),                   
             'client': client,
             'table': table,
             'products': products,

@@ -236,6 +236,13 @@
       "name": "diana",
       "role": "admin",
       "id": 2
+    },
+    {
+      "email": "luna@burgerqueen.com",
+      "password": "lunaluna",
+      "name": "luna araujo",
+      "role": "mesero",
+      "id": 3
     }
   ]
 }

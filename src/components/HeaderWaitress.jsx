@@ -1,22 +1,9 @@
 import { Link } from 'react-router-dom';
-//import { auth } from '../FirebaseConfig';
-//import logo from "../assets/Burger-Queen-logo.png";
-//import { signOut } from "firebase/auth";
 import { Fragment } from 'react';
 import './style/Style.css';
 import Header from './Header'
 
 const HeaderWaitress = () => {
-    //const navigate = useNavigate();
-    /* const logOut = async () => {
-        try {
-            await signOut(auth);
-            console.log('LogOut');
-            navigate("/");    
-        } catch (error) {
-            console.log(error.code);
-        }
-    } */
     return (
         <Fragment>
             <div className="header">
