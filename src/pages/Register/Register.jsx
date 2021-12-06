@@ -1,44 +1,38 @@
-import React, { Fragment } from 'react';
-import { auth } from '../../FirebaseConfig';
-import { createUserWithEmailAndPassword, updateProfile, updateCurrentUser } from 'firebase/auth';
+import React, { Fragment, useState } from 'react';
+//import { auth } from '../../FirebaseConfig';
+//import { createUserWithEmailAndPassword, updateProfile, updateCurrentUser } from 'firebase/auth';
 import { Link} from 'react-router-dom';
 import Header from '../../components/Header';
 import FormRegister from '../../components/FormRegister';
-import '../../components/style/Style.css'
+import '../../components/style/Style.css';
+//import Cookies from 'universal-cookie/es6';
 
-function Register (){   
+function Register (){ 
     
-    const signPromise = async (signMail,signPassword, signUsername, signRole) => { 
-        let originalUser = auth.currentUser; 
-        console.log( "PRIMERO",originalUser);
+    const [users, setUsers] = useState([])
+    
+    fetch('http://localhost:8000/users')
+        .then(res => {
+            return res.json();
+        })
+        .then(users => {
+            setUsers(users);                
+        })
+
+    
+    const signPromise = (signMail,signPassword, signUsername, signRole) => {                 
         if(signMail !== '' && signPassword !== ''  && signUsername !== ''  && signRole !== ''){
-            try{
-                const user = await createUserWithEmailAndPassword(
-                    auth,
-                    signMail,
-                    signPassword
-                );
-                await updateProfile(auth.currentUser,{
-                    displayName: signUsername
-                });                
-                console.log(user);
-                if(user){
-                    saveUserInfo(signMail,signPassword, signUsername, signRole);
-                    await updateCurrentUser(originalUser);
-                    console.log(auth.currentUser);
-                }                              
-            } catch (error){
-                // Swal.fire
-                console.log(error.code);
-            }
-        } else {
-            console.log(signMail,signPassword, signUsername, signRole)
+            // eslint-disable-next-line array-callback-return
+            const existUser = users.map((elem) => { if( signMail === elem.email) return elem.email})
+            existUser.includes(signMail) ? alert('Este correo ya esta registrado') :
+            saveUserInfo(signMail,signPassword, signUsername, signRole);
+        } else {            
             alert('Ingresa todos los datos necesarios')
         }        
     }
 
     const saveUserInfo = (signMail,signPassword, signUsername, signRole ) => {
-        fetch('https://burger-queen-fake-server-app.herokuapp.com/users', {
+        fetch('http://localhost:8000/users', {
             method:'POST',
             headers:{
                 "Content-Type": "application/json"
@@ -50,7 +44,7 @@ function Register (){
                 role: signRole,                
             })
         }).then(response => response.json())
-        .then(alert('usuario creado exitosamente'))              
+        .then(alert('usuario creado exitosamente'))         
     }
 
     return(

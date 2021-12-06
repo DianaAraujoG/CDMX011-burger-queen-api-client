@@ -7,7 +7,7 @@ function SendButton ({client, table, products, setProducts,setClient}){
     
     const saveOrder = () => {
         const order ={
-           'userId' : auth.currentUser.email,                       
+           'userId' : auth.currentUser.email,   /*Aqui usamos auth*/                    
             'client': client,
             'table': table,
             'products': products,
