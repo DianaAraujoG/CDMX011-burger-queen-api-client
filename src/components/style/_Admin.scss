@@ -1,0 +1,71 @@
+@mixin fontStyle($fontSize, $fontWeight) {
+    font-family:'Spartan', sans-serif;
+    font-size: $fontSize !important;
+    font-weight:$fontWeight;
+}
+@mixin flexCenter (){
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminUsers{
+    display: flex;
+    justify-content: space-around;
+    background-color: #F7E7D0;
+    margin: 1vmin -2vmax 0 -2vmax;
+    padding-left: 4vmax;
+    padding-right: 3vmax;
+    min-height: 100vmin;
+    max-height: auto;
+}
+
+.usersData{
+    margin-top: 5vmin;
+    width: 55%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    .userCard{
+        @include flexCenter();
+        width: 40%;
+        flex-flow: column wrap;
+        background: rgba(217, 162, 150, 0.45); 
+        height: fit-content;
+        border-radius: 10px;
+        margin: 2vmin 1vmin 3vmin 1vmin;
+        font-family: Spartan;
+        
+        h1{
+            margin-top: -1vmin;
+            margin-bottom: 0vmin;
+            font-size: 3.5vmin;
+        }
+        button{
+            @include fontStyle(1.6vmin, bold);
+            background: #FFE265;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 3px;  
+            border: none;     
+            width: 8vmin;
+            height: 3vmin;
+            margin: 0 1.5vmin 1.5vmin 1.5vmin;           
+        }
+        h3 {
+            @include fontStyle(1.2vmin, normal);
+            color: white;
+            text-align: center;
+        }
+    }
+    .footerUser{
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #BF6653;
+    }
+
+    .imgUser{
+        transform: translate(0, -30%);
+    }
+}

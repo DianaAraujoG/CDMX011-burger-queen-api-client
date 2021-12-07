@@ -224,23 +224,23 @@
   ],
   "users": [
     {
-      "email": "voy@mail.com",
+      "email": "angie@BQ.com",
       "password": "123456",
-      "name": "aquiyo",
-      "role": "mesero",
+      "name": "Angie",
+      "role": "chef",
       "id": 1
     },
     {
-      "email": "diana@mail.com",
-      "password": "234566",
-      "name": "diana",
+      "email": "diana@BQ.com",
+      "password": "123456",
+      "name": "Diana",
       "role": "admin",
       "id": 2
     },
     {
-      "email": "luna@burgerqueen.com",
+      "email": "luna@BQ.com",
       "password": "lunaluna",
-      "name": "luna araujo",
+      "name": "Luna Araujo",
       "role": "mesero",
       "id": 3
     }

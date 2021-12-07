@@ -1,15 +1,26 @@
-.Register{
-    background-color: #F7E7D0;
-    display: flex;
-    flex-flow: column wrap;
-    margin: 1vmin -2vmax 0 -2vmax;
-    padding-left: 4vmax;
-    padding-right: 3vmax;
-    min-height: 100vmin;
-    max-height: auto;
-}
-
 .userRole{
     font-family:'Spartan', sans-serif;
     background-color:#F2E088;
+}
+
+.formRegister{
+    width: 40%;
+    form {
+        height: fit-content;
+        background: rgba(61, 68, 244, 0.27);
+        h1{
+            font-size: 3.8vh !important;
+        }
+        label{
+            font-size: 3.2vh !important;
+        }
+        input{
+            font-size: 2.5vh !important;
+        }    
+        select{
+            font-size: 2vh;
+            margin: 2vw;
+            padding: 1vmin;
+        } 
+    }
 }

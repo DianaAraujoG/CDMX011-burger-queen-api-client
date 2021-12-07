@@ -1,13 +1,17 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { Link} from 'react-router-dom';
 import Header from '../../components/Header';
 import FormRegister from '../../components/FormRegister';
+import GetUsers from '../../components/GetUsers';
 import '../../components/style/Style.css';
+
+
 function Register (){ 
     
-    const [users, setUsers] = useState([])
-    
-    fetch('https://burger-queen-fake-server-app.herokuapp.com/users/')
+    const [users, setUsers] = useState([]);
+   
+    useEffect(() => {
+        fetch('https://burger-queen-fake-server-app.herokuapp.com/users')
         .then(res => {
             return res.json();
         })
@@ -17,7 +21,7 @@ function Register (){
         .catch(error => {
             alert(error);
         })
-
+    }, []);
     
     const signPromise = (signMail,signPassword, signUsername, signRole) => {                 
         if(signMail !== '' && signPassword !== ''  && signUsername !== ''  && signRole !== ''){
@@ -31,7 +35,7 @@ function Register (){
     }
 
     const saveUserInfo = (signMail,signPassword, signUsername, signRole ) => {
-        fetch('https://burger-queen-fake-server-app.herokuapp.com/users/', {
+        fetch('https://burger-queen-fake-server-app.herokuapp.com/users', {
             method:'POST',
             headers:{
                 "Content-Type": "application/json"
@@ -40,7 +44,8 @@ function Register (){
                 email: signMail,
                 password: signPassword,
                 name: signUsername,
-                role: signRole,                
+                role: signRole,
+                dataEntry: new Date(),               
             })
         }).then(response => response.json())
         .then(alert('usuario creado exitosamente'))         
@@ -62,10 +67,13 @@ function Register (){
                 </Link>
               </div>
             </Header>
-            <div className="Register">            
-                <div className='form'></div>
+            <div className="AdminUsers">   
                 <FormRegister saveUser={signPromise}></FormRegister>
+                <div className='usersData'>
+                    {users && <GetUsers Users={users} ></GetUsers>}
+                </div>
             </div>
+
         </Fragment>
     )
 }

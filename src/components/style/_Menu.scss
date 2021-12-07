@@ -48,15 +48,15 @@
     }
 }
 #listProduct{
-    width: 52%;
+    width: 55%;
     display: flex;
     flex-flow: column wrap;
     .product{
         @include basic (1.5vmin, 1.5vmin, 22vmax, 10vmax);
+        @include fontStyle(2vmin, bold);
         flex-basis: 10%;
         display: inline-flex;        
         background-color: rgba(217, 162, 150, 0.63);
-        @include fontStyle(2vmin, bold);
         line-height: 1vmin;
         text-align: center;
         border: none;

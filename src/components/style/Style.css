@@ -66,6 +66,12 @@ form button {
   padding: 1.5vmin !important;
 }
 
+form select {
+  background-color: #F2E088;
+  border-radius: 50px;
+  border: none;
+}
+
 .link {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -164,7 +170,7 @@ form button {
 }
 
 #listProduct {
-  width: 52%;
+  width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,15 +185,15 @@ form button {
   margin: 1.5vmin;
   width: 22vmax;
   height: 10vmax;
+  font-family: 'Spartan', sans-serif;
+  font-size: 2vmin;
+  font-weight: bold;
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   background-color: rgba(217, 162, 150, 0.63);
-  font-family: 'Spartan', sans-serif;
-  font-size: 2vmin;
-  font-weight: bold;
   line-height: 1vmin;
   text-align: center;
   border: none;
@@ -618,15 +624,47 @@ form button {
   font-weight: bold;
 }
 
-.Register {
-  background-color: #F7E7D0;
+.userRole {
+  font-family: 'Spartan', sans-serif;
+  background-color: #F2E088;
+}
+
+.formRegister {
+  width: 40%;
+}
+
+.formRegister form {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(61, 68, 244, 0.27);
+}
+
+.formRegister form h1 {
+  font-size: 3.8vh !important;
+}
+
+.formRegister form label {
+  font-size: 3.2vh !important;
+}
+
+.formRegister form input {
+  font-size: 2.5vh !important;
+}
+
+.formRegister form select {
+  font-size: 2vh;
+  margin: 2vw;
+  padding: 1vmin;
+}
+
+.AdminUsers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #F7E7D0;
   margin: 1vmin -2vmax 0 -2vmax;
   padding-left: 4vmax;
   padding-right: 3vmax;
@@ -634,9 +672,80 @@ form button {
   max-height: auto;
 }
 
-.userRole {
+.usersData {
+  margin-top: 5vmin;
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.usersData .userCard {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  background: rgba(217, 162, 150, 0.45);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  margin: 2vmin 1vmin 3vmin 1vmin;
+  font-family: Spartan;
+}
+
+.usersData .userCard h1 {
+  margin-top: -1vmin;
+  margin-bottom: 0vmin;
+  font-size: 3.5vmin;
+}
+
+.usersData .userCard button {
   font-family: 'Spartan', sans-serif;
-  background-color: #F2E088;
+  font-size: 1.6vmin !important;
+  font-weight: bold;
+  background: #FFE265;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  border: none;
+  width: 8vmin;
+  height: 3vmin;
+  margin: 0 1.5vmin 1.5vmin 1.5vmin;
+}
+
+.usersData .userCard h3 {
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.2vmin !important;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+
+.usersData .footerUser {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #BF6653;
+}
+
+.usersData .imgUser {
+  -webkit-transform: translate(0, -30%);
+          transform: translate(0, -30%);
 }
 
 body {
