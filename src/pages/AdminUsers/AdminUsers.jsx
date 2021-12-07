@@ -3,14 +3,17 @@ import { Link} from 'react-router-dom';
 import Header from '../../components/Header';
 import FormRegister from '../../components/FormRegister';
 import GetUsers from '../../components/GetUsers';
+// import ModalUsers from '../../components/ModalUsers';
+import Swal from 'sweetalert2';
 import '../../components/style/Style.css';
 
 
-function Register (){ 
+function AdminUsers (){ 
     
     const [users, setUsers] = useState([]);
+    const [data, setData] =useState({})
    
-    useEffect(() => {
+     const getUsers = () => {
         fetch('https://burger-queen-fake-server-app.herokuapp.com/users')
         .then(res => {
             return res.json();
@@ -21,6 +24,10 @@ function Register (){
         .catch(error => {
             alert(error);
         })
+     }
+
+    useEffect(() => {
+        getUsers()
     }, []);
     
     const signPromise = (signMail,signPassword, signUsername, signRole) => {                 
@@ -30,7 +37,7 @@ function Register (){
             existUser.includes(signMail) ? alert('Este correo ya esta registrado') :
             saveUserInfo(signMail,signPassword, signUsername, signRole);
         } else {            
-            alert('Ingresa todos los datos necesarios')
+            Swal.fire('Ingresa todos los datos necesarios')
         }        
     }
 
@@ -45,11 +52,32 @@ function Register (){
                 password: signPassword,
                 name: signUsername,
                 role: signRole,
-                dataEntry: new Date(),               
+                dateEntry: new Date(),               
             })
         }).then(response => response.json())
-        .then(alert('usuario creado exitosamente'))         
+        .then(Swal.fire('usuario creado exitosamente'))         
     }
+ 
+    const deleteUser = (user) => {
+        Swal.fire({
+            title: 'Eliminar empleado',
+            text: '¿Deseas eleminar este empleado? Al confirmar, no podrás revertir el cambio',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch('https://burger-queen-fake-server-app.herokuapp.com/users/' + user.id, {
+                method: 'DELETE'
+                }).then(Swal.fire('Empleado eliminado'))
+                .then(() => getUsers())
+            }})
+    }
+
+    
+
+    
 
     return(
         <Fragment>
@@ -68,14 +96,17 @@ function Register (){
               </div>
             </Header>
             <div className="AdminUsers">   
-                <FormRegister saveUser={signPromise}></FormRegister>
+                {data ? (data && <FormRegister saveUser={signPromise} user={data}></FormRegister> ):
+                <FormRegister saveUser={signPromise} ></FormRegister>}
                 <div className='usersData'>
-                    {users && <GetUsers Users={users} ></GetUsers>}
+                    {users && <GetUsers Users={users} deleteUser={deleteUser} setData={setData}></GetUsers>}
+                    {console.log(data)}
                 </div>
+                {/* <ModalUsers show= {show}></ModalUsers> */}
             </div>
 
         </Fragment>
     )
 }
 
-export default Register;
+export default AdminUsers;

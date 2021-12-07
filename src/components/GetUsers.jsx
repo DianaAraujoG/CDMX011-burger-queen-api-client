@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import '../components/style/Style.css';
+//import FormRegister from '../components/FormRegister'
 
-const GetUsers = ({Users}) => {
+const GetUsers = ({Users, deleteUser, setData}) => {
     return(
         <Fragment>
             { Users.map((user) => (
@@ -22,8 +23,8 @@ const GetUsers = ({Users}) => {
                     <h2>{user.role}</h2>
                     <h2>{user.email}</h2>
                     <div className='btnsUsers'>
-                        <button>Eliminar</button>
-                        <button>Editar</button>
+                        <button onClick= {() => deleteUser(user)}>Eliminar</button>
+                        <button onClick= {() => setData(user)}>Editar</button>
                     </div>
                     <div className='footerUser'>
                         <h3>Empleado desde: {user.dateEntry}</h3>

@@ -7,7 +7,7 @@ import LogIn from './pages/LogIn/LogIn';
 import Menu from "./pages/menu/Menu";
 import OrderToDeliver from "./pages/ordersToDeliver/OrdersToDeliver";
 import Kitchen from './pages/Kitchen/Kitchen';
-import Register from './pages/Register/Register'
+import AdminUsers from './pages/AdminUsers/AdminUsers'
 import AdminProducts from './pages/AdminProducts/AdminProducts'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <div>
        <Routes>
         <Route path='/' element={<LogIn/>} />
-        <Route path='register' element={<Register/>} />
+        <Route path='adminUsers' element={<AdminUsers/>} />
         <Route path='adminProducts' element={<AdminProducts/>} />
         <Route path='menu' element={<Menu/>} />
         <Route path='orderToDeliver' element={<OrderToDeliver/>} />
