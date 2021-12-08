@@ -658,7 +658,7 @@ form select {
   padding: 1vmin;
 }
 
-.AdminUsers {
+.AdminUsers, .AdminProducts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,19 +672,21 @@ form select {
   max-height: auto;
 }
 
-.usersData {
+.usersData, .productsData {
   margin-top: 5vmin;
   width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: wrap-reverse;
+          flex-flow: wrap-reverse;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-.usersData .userCard {
+.usersData .userCard, .usersData .productCard, .productsData .userCard, .productsData .productCard {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -708,13 +710,13 @@ form select {
   font-family: Spartan;
 }
 
-.usersData .userCard h1 {
+.usersData .userCard h1, .usersData .productCard h1, .productsData .userCard h1, .productsData .productCard h1 {
   margin-top: -1vmin;
   margin-bottom: 0vmin;
   font-size: 3.5vmin;
 }
 
-.usersData .userCard button {
+.usersData .userCard button, .usersData .productCard button, .productsData .userCard button, .productsData .productCard button {
   font-family: 'Spartan', sans-serif;
   font-size: 1.6vmin !important;
   font-weight: bold;
@@ -728,7 +730,7 @@ form select {
   margin: 0 1.5vmin 1.5vmin 1.5vmin;
 }
 
-.usersData .userCard h3 {
+.usersData .userCard h3, .usersData .productCard h3, .productsData .userCard h3, .productsData .productCard h3 {
   font-family: 'Spartan', sans-serif;
   font-size: 1.2vmin !important;
   font-weight: normal;
@@ -736,16 +738,39 @@ form select {
   text-align: center;
 }
 
-.usersData .footerUser {
+.usersData .footerUser, .usersData .footerProducts, .productsData .footerUser, .productsData .footerProducts {
   width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background: #BF6653;
 }
 
-.usersData .imgUser {
+.usersData .imgUser, .productsData .imgUser {
   -webkit-transform: translate(0, -30%);
           transform: translate(0, -30%);
+}
+
+.usersData .productImg, .productsData .productImg {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(247, 231, 208, 0.4);
+  border: 2px solid #240E09;
+  border-radius: 50%;
+  -webkit-transform: translate(0, -30%);
+          transform: translate(0, -30%);
+  width: 9vmax;
+}
+
+.usersData .productImg img, .productsData .productImg img {
+  width: 6vmax;
+  margin: 1vmin;
 }
 
 body {

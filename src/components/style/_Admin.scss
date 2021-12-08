@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-.AdminUsers{
+.AdminUsers, .AdminProducts{
     display: flex;
     justify-content: space-around;
     background-color: #F7E7D0;
@@ -20,14 +20,14 @@
     max-height: auto;
 }
 
-.usersData{
+.usersData, .productsData {
     margin-top: 5vmin;
     width: 55%;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: wrap-reverse;
     justify-content: space-around;
 
-    .userCard{
+    .userCard, .productCard{
         @include flexCenter();
         width: 40%;
         flex-flow: column wrap;
@@ -58,7 +58,7 @@
             text-align: center;
         }
     }
-    .footerUser{
+    .footerUser, .footerProducts{
         width: 100%;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -67,5 +67,17 @@
 
     .imgUser{
         transform: translate(0, -30%);
+    }
+    .productImg{
+        @include flexCenter();
+        background: rgba(247, 231, 208, 0.4);
+        border: 2px solid #240E09;
+        border-radius: 50%;
+        transform: translate(0, -30%);
+        width: 9vmax;
+        img{
+        width: 6vmax;
+        margin: 1vmin;
+        }
     }
 }

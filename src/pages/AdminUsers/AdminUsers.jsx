@@ -30,7 +30,7 @@ function AdminUsers (){
         getUsers()
     }, []);
     
-    const signPromise = (signMail,signPassword, signUsername, signRole) => {                 
+    const signPromise = (signMail,signPassword, signUsername, signRole) => {
         if(signMail !== '' && signPassword !== ''  && signUsername !== ''  && signRole !== ''){
             // eslint-disable-next-line array-callback-return
             const existUser = users.map((elem) => { if( signMail === elem.email) return elem.email})
@@ -55,7 +55,8 @@ function AdminUsers (){
                 dateEntry: new Date(),               
             })
         }).then(response => response.json())
-        .then(Swal.fire('usuario creado exitosamente'))         
+        .then(Swal.fire('usuario creado exitosamente'))
+        .then(() => getUsers())
     }
  
     const deleteUser = (user) => {
@@ -75,7 +76,24 @@ function AdminUsers (){
             }})
     }
 
-    
+    const editUser = (Email, Password, Username, Role, user ) => {
+        
+        const requestOptions = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify( { ...user,
+                "email": Email,
+                "password": Password,
+                "name": Username,
+                "role": Role,
+            } )
+        };
+        fetch('https://burger-queen-fake-server-app.herokuapp.com/users/' + user.id, requestOptions)
+            .then(response => response.json())
+            .then(Swal.fire('Empleado editado :)'))
+            .then(() => getUsers())
+    }
+   
 
     
 
@@ -83,7 +101,7 @@ function AdminUsers (){
         <Fragment>
             <Header>
               <div className="btnsHeader">
-                <Link to = '/register' className='changeRoute'>
+                <Link to = '/adminUsers' className='changeRoute'>
                     <button className='btnRegister'>
                         <img src="https://i.ibb.co/J77T75M/usuario-Button.png" alt="usuario-Button"></img>
                     </button>
@@ -96,8 +114,8 @@ function AdminUsers (){
               </div>
             </Header>
             <div className="AdminUsers">   
-                {data ? (data && <FormRegister saveUser={signPromise} user={data}></FormRegister> ):
-                <FormRegister saveUser={signPromise} ></FormRegister>}
+                {Object.entries(data).length === 0 ?  (data && <FormRegister  user={data} saveData={signPromise} ></FormRegister>): 
+                (data && <FormRegister user={data} editUser={editUser} ></FormRegister> )} 
                 <div className='usersData'>
                     {users && <GetUsers Users={users} deleteUser={deleteUser} setData={setData}></GetUsers>}
                     {console.log(data)}

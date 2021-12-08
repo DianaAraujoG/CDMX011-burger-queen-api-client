@@ -2,13 +2,13 @@ import React, { Fragment, useState, useEffect } from 'react';
 import './style/Style.css';
 // import Swal from 'sweetalert2';
 
-function SignUp ({saveUser, user}) {
+function SignUp ({saveData, user, editUser}) {
 
     const [signMail, setsignMail] = useState('');
     const [signPassword, setsignPassword] = useState('');
     const [signUsername, setsignUsername] = useState('');
     const [signRole, setsignRole] = useState('');
-    console.log(user);
+    console.log(Object.entries(user).length);
 
     // const [id, setID] = useState(null);
 
@@ -25,12 +25,8 @@ function SignUp ({saveUser, user}) {
     return (
         <Fragment>
           <main className="formRegister">
-             <form id='formSignUp' onSubmit={(event) => {
-              event.preventDefault();
-             (user) ? alert('Estas editando') : saveUser(signMail,signPassword, signUsername, signRole);  
-             event.target.reset()
-             }}>
-                <h1 className ='h1Form'>{user ? 'Editar' :'Registra a un empleado'}</h1>
+             <form id='formSignUp'>
+                <h1 className ='h1Form'>{Object.entries(user).length === 0 ? 'Registra a un empleado' : 'Editar'}</h1>
                 <label htmlFor= 'formUsername'> Nombre: </label>
                  <input
                  type='text'
@@ -73,12 +69,16 @@ function SignUp ({saveUser, user}) {
                       <option value= 'mesero'>Mesero</option>
                       <option value= 'admin'>Administrador</option>
                   </select>
-                 {user ? <button 
+                 {Object.entries(user).length === 0 ? <button 
                   className= 'buttonForm'
-                  type='submit'>Editar</button> :
-                  <button 
+                  type='button'
+                  onClick={() => {saveData(signMail,signPassword, signUsername, signRole)}}>
+                    Registrar</button> : <button 
                   className= 'buttonForm'
-                  type='submit'>Registrar</button>}                            
+                  type='button'
+                  onClick={() => {editUser(signMail,signPassword, signUsername, signRole, user) }}
+                  >Editar</button>
+                  }                            
              </form>
           </main>          
         </Fragment>
