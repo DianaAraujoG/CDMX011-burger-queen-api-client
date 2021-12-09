@@ -12,17 +12,26 @@ function AdminProducts (){
     const [products, setProducts] = useState([]);
     const [data, setData] =useState({})
    
-     const getProducts = () => {
-        fetch('https://burger-queen-fake-server-app.herokuapp.com/products')
-        .then(res => {
-            return res.json();
-        })
-        .then(products => {
-            setProducts(products);                
-        })
-        .catch(error => {
+     const getProducts = async () => {
+        try{
+            const requestProducts = await fetch('https://burger-queen-fake-server-app.herokuapp.com/products');
+            const response = await requestProducts;
+            const productsJson = await response.json();
+            setProducts(productsJson);
+        }catch(error){
             alert(error);
-        })
+        }
+
+        // fetch('https://burger-queen-fake-server-app.herokuapp.com/products')
+        // .then(res => {
+        //     return res.json();
+        // })
+        // .then(products => {
+        //     setProducts(products);                
+        // })
+        // .catch(error => {
+        //     alert(error);
+        // })
      }
 
     useEffect(() => {
